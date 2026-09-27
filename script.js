@@ -9,8 +9,6 @@ for (let food of favoriteFoods) {
 }
 
 
-
-
 // 3. Print out the rating for each food with a ranking like:
 // "My #1 favorite food is Ramen" (copy/paste for all items)
 // "My #2 favorite food is Sushi"
@@ -20,18 +18,21 @@ for (let i = 0; i < favoriteFoods.length; i++) {
 }
 
 
-
-
 // 4a. Create a function printFoodRecommendation(foodName) that prints out the following for the foodName provided
     // "Have you ever tried ____?"
     // "I always recommend ____ to friends."
     // "Trust me — ____ is delicious."
-
-
+function printFoodRecommendation(foodName) {
+  console.log("Have you ever tried " + foodName + "?")
+  console.log("I always recommend " + foodName + " to friends.")
+  console.log("Trust me — " + foodName + " is delicious.");
+}
 
 
 // 4b. Call the function at least 3 times
-
+printFoodRecommendation("nachos");
+printFoodRecommendation("ramen");
+printFoodRecommendation("pasta");
 
 
 // Here's a list of 50 friends' favorite foods:
@@ -40,12 +41,22 @@ let friendFavorites = [
   ];
 
 // 5. Print out only foods that have an "a" in the name. For example, "Pizza" would not be included, but "Donuts" would be.
-
-
+for (let food of friendFavorites) {
+  if (food.includes("a")) {
+    console.log(food);
+  }
+}
 
 // 6. Store the result in an array called foodsWithA. Print out the array.
+let foodsWithA = [];
 
+for (let food of friendFavorites) {
+  if (food.includes("a")) {
+    foodsWithA.push(food);
+  }
+}
 
+console.log(foodsWithA);
 
 // 7. Create a new array longFoodNames for foods with names longer than 6 characters.
 
